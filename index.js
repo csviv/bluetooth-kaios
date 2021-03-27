@@ -8,7 +8,7 @@ var print_message = function(message){
 };
 
 var bte_setup = function(){
-  var lock = navigator.mozSettings.createLock();
+  var lock = window.navigator.mozSettings.createLock();
   var lockCompleteReq = lock.set({
 	'bluetooth.enabled': true
   });
@@ -26,7 +26,10 @@ var bte_adapter = function(){
   console.log('getting adapter..');
   var adapter;
   print_message("getting adapter..");
-  var getAdapter = navigator.mozBluetooth.getDefaultAdapter();
+  var manager = navigator.mozBluetooth;
+  var getAdapter = manager.getAdapters();
+
+  print_message(getAdapter);
 
   // Retreving the local device adapter is asynchronous, handle this carefully.
   getAdapter.success = function(evt) {
@@ -51,8 +54,12 @@ var bte_adapter = function(){
 var main = function(){
   console.log('index.js');
   print_message('starting script..');
+  var methods = Object.keys(navigator);
+  print_message("methods");
+  print_message(methods.length);
+  methods.forEach(e => print_message(e));
   try{
-	bte_setup();
+	//bte_setup();
 	bte_adapter();
   } catch(err){
 	print_message(err)

@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "BLUETOOTH-KAIOS",
   "description": "",
-  "type": "web",
+  "type": "privileged",
   "launch_path": "/index.html",
   "icons": {
     "56": "/assets/logo.png",
