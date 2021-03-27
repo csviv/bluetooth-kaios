@@ -12,6 +12,9 @@
     "name": "alex s",
     "url": "http://lessand.ro"
   },
+  "permission": {
+	"bluetooth":{}
+  },
   "locales": {
     "en-US": {
       "name": "BLUETOOTH-KAIOS",
