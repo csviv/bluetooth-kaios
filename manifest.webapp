@@ -1,22 +1,22 @@
 {
   "version": "1.0.0",
-  "name": "ALEX_SAMPLE_APPP",
-  "description": "Simple example of a to-do list",
+  "name": "BLUETOOTH-KAIOS",
+  "description": "",
   "type": "web",
   "launch_path": "/index.html",
   "icons": {
-    "56": "/assets/icons/kaios_56.png",
-    "112": "/assets/icons/kaios_112.png"
+    "56": "/assets/logo.png",
+    "112": "/assets/logo.png"
   },
   "developer": {
-    "name": "KaiOS Team",
-    "url": "https://www.kaiostech.com"
+    "name": "alex s",
+    "url": "http://lessand.ro"
   },
   "locales": {
     "en-US": {
-      "name": "My first Vanilla App for KaiOS",
-      "subtitle": "Simple example of a to-do list",
-      "description": "Simple example of a to-do list"
+      "name": "BLUETOOTH-KAIOS",
+      "subtitle": "",
+      "description": ""
     }
   },
   "default_locale": "en-US"
