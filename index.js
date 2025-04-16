@@ -51,6 +51,20 @@ var bte_adapter = function(){
  // }
 }
 
+var lescan = function(){
+navigator.mozBluetooth.defaultAdapter.startLeScan()
+    .then((handle) => {
+        handle.ondevicefound = (leDeviceEvent) => {
+            let nameOrAddress = leDeviceEvent.device.name || leDeviceEvent.device.address;
+            console.log(`Device found ${nameOrAddress} RSSI = ${leDeviceEvent.rssi}`);
+        };
+
+        setTimeout(() => {
+            navigator.mozBluetooth.defaultAdapter.stopLeScan(handle);
+        }, 5000)
+    });
+}
+
 var main = function(){
   console.log('index.js');
   print_message('starting script..');
@@ -60,10 +74,12 @@ var main = function(){
   methods.forEach(e => print_message(e));
   try{
 	bte_setup();
-	bte_adapter();
+	//bte_adapter();
+ lescan()
   } catch(err){
 	print_message(err)
   }
+ 
 }
 main();
 
