@@ -76,6 +76,7 @@ var main = function(){
 	bte_setup();
 	//bte_adapter();
  lescan()
+ //todo: connect and try the code, read gc value every 5 minutes
   } catch(err){
 	print_message(err)
   }
